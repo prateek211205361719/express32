@@ -1,6 +1,7 @@
 
 var express = require('express');
 var hbs = require('hbs');
+var port = process.env.PORT || 300;
 hbs.registerHelper('handleCheckbox', function(val){
     return (val ? 'checked' : '');
 
@@ -69,6 +70,6 @@ app.get('/deleteTodo/:id', function(req, res){
     
 });
 
-app.listen(3000, function(){{
-    console.log('------hello-------');
+app.listen(port, function(){{
+    console.log('------hello-------'+port);
 }});
