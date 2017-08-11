@@ -1,0 +1,27 @@
+.container{
+
+    margin:auto;
+    width:80%;
+    background:rgba(128, 128, 128, 0.07);
+
+}
+
+header{
+   text-align:center;
+
+}
+
+table{
+    width: 100%;
+    padding: 50px;
+    
+}
+table > thead >tr > th{
+    text-align: left;
+    padding:10px;
+  
+}
+.action{
+    text-align: center;
+    
+}

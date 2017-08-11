@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Home page hello</h1>
+            </header>
+           
+            <div>
+                <div class="action">
+                <a href="/todo">New</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Completed</th>
+                            <th>Completed At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       {{#each result}}
+                            <tr>
+                                <td>{{ this.text }}</td>
+                                <td>{{ this.completed }}</td>
+                                <td>{{ this.completedAt }}</td>
+                                <td>
+                                    <a href="/deleteTodo/{{ this._id }}">
+                                    Delete</a>
+                                     <a href="/todo/{{ this._id }}">
+                                    Edit</a>
+                            </td>
+                            </tr>
+                        {{/each}}
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
